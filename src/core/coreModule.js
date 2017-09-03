@@ -6,9 +6,6 @@
  * @Description:It is the core library component which load other components.
  */
 
-
-
-
 "use strict";
 class coreModule {
     constructor() { }
