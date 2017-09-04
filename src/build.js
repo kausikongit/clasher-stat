@@ -10,8 +10,12 @@
 /* Using namespace ClasherStat*/
 
 "use strict";
-let CoreModule = require("./core/coreModule"); 
-let ClasherStat = new CoreModule(); 
+let CoreModule = require("./core/coreModule");
+
+if (!window.jQuery) {
+	throw new Error("No jquery found ! Please load it before...");
+}
+let ClasherStat = new CoreModule();
 
 module.exports = ClasherStat;
 

@@ -7,11 +7,14 @@
  */
 
 "use strict";
+
+let dataProvider = require("./../provider/dataProvider");
+
 class coreModule {
     constructor() { }
 
     initCore() {
-
+        dataProvider.getClanData("kolkata army");
     }
 }
 

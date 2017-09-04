@@ -8,11 +8,37 @@
 
 "use strict";
 const conf = require("./../configuration");
-class DataProvider {
-    constructor() { }
+const authTokens = require("./../auth/authTokens");
 
-   
+class DataProvider {
+    constructor() {}
+
+    getClanData(tagName) {
+        this.request(
+            "/clans", {
+                "name": tagName
+            }, "GET",
+            function success(data, status, xhr) {
+
+            },
+            function error(err, status, xhr) {
+
+            }
+        );
+    }
+
+    request(reqURL, reqData, reqType, onSuccess, onError) {
+        $.ajax({
+            headers: authTokens[conf.env],
+            url: conf.baseURL + reqURL,
+            data: reqData,
+            type: reqType,
+            dataType: "json",
+            success: onSuccess,
+            error: onError
+        });
+    }
+
 }
 
-module.exports = DataProvider;
-
+module.exports = new DataProvider();
