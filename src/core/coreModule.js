@@ -14,7 +14,7 @@ class coreModule {
     constructor() { }
 
     initCore() {
-        dataProvider.getClanData("kolkata army");
+        dataProvider.getClanData("kolkata");
     }
 }
 

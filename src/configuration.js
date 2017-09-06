@@ -1,4 +1,4 @@
 module.exports = {
-    "env" : "localhost",
+    "env" : "localhostWork",
     "baseURL": "https://api.clashofclans.com/v1"
 }; 

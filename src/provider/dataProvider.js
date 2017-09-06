@@ -19,10 +19,10 @@ class DataProvider {
                 "name": tagName
             }, "GET",
             function success(data, status, xhr) {
-
+                console.log(data);
             },
             function error(err, status, xhr) {
-
+                console.log(err);
             }
         );
     }
