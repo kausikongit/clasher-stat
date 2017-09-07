@@ -1,4 +1,4 @@
 module.exports = {
     "env" : "localhostWork",
-    "baseURL": "https://api.clashofclans.com/v1"
+    "baseURL": "/clasher-stat/src/api/v1"
 }; 

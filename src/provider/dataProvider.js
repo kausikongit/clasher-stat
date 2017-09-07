@@ -13,10 +13,10 @@ const authTokens = require("./../auth/authTokens");
 class DataProvider {
     constructor() {}
 
-    getClanData(tagName) {
+    getClanData(filter) {
         this.request(
-            "/clans", {
-                "name": tagName
+            "/clans.php", {
+                "opt": "name="+filter+"&limit=10"
             }, "GET",
             function success(data, status, xhr) {
                 console.log(data);
@@ -29,7 +29,6 @@ class DataProvider {
 
     request(reqURL, reqData, reqType, onSuccess, onError) {
         $.ajax({
-            headers: authTokens[conf.env],
             url: conf.baseURL + reqURL,
             data: reqData,
             type: reqType,
