@@ -52,7 +52,7 @@
 
     .war-planner-container .well .each-player .player-league-icon {
         width: 20px;
-        vertical-align: bottom; 
+        vertical-align: bottom;
     }
 
     .war-planner-container .well .each-player .player-role {
@@ -66,8 +66,12 @@
         width: 100%;
         /* for IE 6 */
     }
+
     .war-planner-container .well .each-player .player-xp-badge {
-        background-image: url("./resource/star-badge.png");
+        background-image: url(./resource/star-badge.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        color: white; 
     }
     /* .war-planner-container .well .each-player .player-xp-icon {
         width: 25px;
@@ -93,11 +97,11 @@
                             alt="" />
                         <span class='player-name'>Player Name 1</span>
                         <div class='bottom-line'>
-                            <h2 class='player-role'>Elder</h2>
+                            <span class='player-role'>Elder</span>
                             <div class='player-xp-badge'>
-                                dldjkldlj
-                            <!-- <img class='player-xp-icon' src='./resource/star-badge.png' / alt=""> -->
-                            <!-- <h2 class='player-xp-value'>100</h2> -->
+                                <span>12</span>
+                                <!-- <img class='player-xp-icon' src='./resource/star-badge.png' / alt=""> -->
+                                <!-- <h2 class='player-xp-value'>100</h2> -->
                             </div>
                         </div>
 
