@@ -8,13 +8,17 @@
 
 "use strict";
 
-let dataProvider = require("./../provider/dataProvider");
+let DataProvider = require("./../provider/dataProvider");
 
 class coreModule {
-    constructor() { }
+    constructor() {
+        this.data = new DataProvider(); 
+     }
 
     initCore() {
-        dataProvider.getClanData("kolkata army");
+        this.data.getClanCurrentWar("#9GC2VPU0", (data)=>{
+            console.log(data); 
+        });
     }
 }
 

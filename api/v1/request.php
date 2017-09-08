@@ -40,7 +40,7 @@ class Request{
     }
 
     private function getAuthTokens() {
-        return json_decode(file_get_contents("./../../auth/authTokens.json"));
+        return json_decode(file_get_contents("./../auth/authTokens.json"));
     }
 }
 ?>

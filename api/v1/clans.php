@@ -9,7 +9,7 @@ header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers
 include_once './request.php';
 
 $baseUrl = "https://api.clashofclans.com/v1";
-$clanTag = isset($_GET['tag']) ? $_GET['tag'] : null;
+$clanTag = isset($_GET['tag']) ? urlencode($_GET['tag']) : null;
 $subType = isset($_GET['subtype']) ? $_GET['subtype'] : null;
 $rawOpt = isset($_GET['opt']) ? $_GET['opt'] : null;
 
@@ -30,8 +30,11 @@ if($rawOpt != null) {
 
 $reqUrl = $reqUrl . ($opts != "" ? "?" . $opts : ""); 
 
-$clanReq = new Request($reqUrl); 
-$clanInfo = $clanReq->send();
-echo $clanInfo; 
+//echo $reqUrl; 
+
+$req = new Request($reqUrl); 
+$info = $req->send();
+
+echo $info; 
 
 ?>
