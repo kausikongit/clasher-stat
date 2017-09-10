@@ -1,14 +1,20 @@
 {
-    "localhostWork": {
-        "ip":"",
+    "61.16.241.78": {
+        "name":"localhostWork",
         "token": {
             "authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAtYTFlYi03ZmExLTJjNzQzM2M2Y2NhNSJ9.eyJpc3MiOiJzdXBlcmNlbGwiLCJhdWQiOiJzdXBlcmNlbGw6Z2FtZWFwaSIsImp0aSI6ImRiNjgxMzNlLTk3YjYtNDBlYi05NTdmLTA5ZWIwMzYxZjg4YyIsImlhdCI6MTUwNDYwOTI0Miwic3ViIjoiZGV2ZWxvcGVyLzVlYmEwNjhmLTlmZWUtNWJlNi04Y2ZiLWRkOWI1OWM1MzI4NCIsInNjb3BlcyI6WyJjbGFzaCJdLCJsaW1pdHMiOlt7InRpZXIiOiJkZXZlbG9wZXIvc2lsdmVyIiwidHlwZSI6InRocm90dGxpbmcifSx7ImNpZHJzIjpbIjYxLjE2LjI0MS43OCJdLCJ0eXBlIjoiY2xpZW50In1dfQ.Io_MGhVhEOKHwyWKYbBCYDjfC1l4YgOjV9r2bcbWSe_SmPx8CjDhN4vjGwC2vRUhM3QISyzxjb7HrwaHwt_j4Q"
         }
     },
-    "localhostHome": {
-        "ip":"",
+    "45.114.36.232": {
+        "name":"localhostHome",
         "token": {
-            "authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAtYTFlYi03ZmExLTJjNzQzM2M2Y2NhNSJ9.eyJpc3MiOiJzdXBlcmNlbGwiLCJhdWQiOiJzdXBlcmNlbGw6Z2FtZWFwaSIsImp0aSI6ImRiNjgxMzNlLTk3YjYtNDBlYi05NTdmLTA5ZWIwMzYxZjg4YyIsImlhdCI6MTUwNDYwOTI0Miwic3ViIjoiZGV2ZWxvcGVyLzVlYmEwNjhmLTlmZWUtNWJlNi04Y2ZiLWRkOWI1OWM1MzI4NCIsInNjb3BlcyI6WyJjbGFzaCJdLCJsaW1pdHMiOlt7InRpZXIiOiJkZXZlbG9wZXIvc2lsdmVyIiwidHlwZSI6InRocm90dGxpbmcifSx7ImNpZHJzIjpbIjYxLjE2LjI0MS43OCJdLCJ0eXBlIjoiY2xpZW50In1dfQ.Io_MGhVhEOKHwyWKYbBCYDjfC1l4YgOjV9r2bcbWSe_SmPx8CjDhN4vjGwC2vRUhM3QISyzxjb7HrwaHwt_j4Q"
+            "authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAtYTFlYi03ZmExLTJjNzQzM2M2Y2NhNSJ9.eyJpc3MiOiJzdXBlcmNlbGwiLCJhdWQiOiJzdXBlcmNlbGw6Z2FtZWFwaSIsImp0aSI6ImNjYzM0ZjAzLTk2NTEtNDA2Zi05ZTczLTdiZDNkYzRjNzUxNCIsImlhdCI6MTUwNTA2MTg3OSwic3ViIjoiZGV2ZWxvcGVyLzVlYmEwNjhmLTlmZWUtNWJlNi04Y2ZiLWRkOWI1OWM1MzI4NCIsInNjb3BlcyI6WyJjbGFzaCJdLCJsaW1pdHMiOlt7InRpZXIiOiJkZXZlbG9wZXIvc2lsdmVyIiwidHlwZSI6InRocm90dGxpbmcifSx7ImNpZHJzIjpbIjQ1LjExNC4zNi4yMzIiXSwidHlwZSI6ImNsaWVudCJ9XX0.S048Mj0Yt6ity98w0k_O6enX69q2H8m8Kl-SeYc6i58wiryn4bnHGud54uoKni-C3_YTlMsE97qOfzT8NU4nwA"
+        }
+    },
+    "47.15.5.90": {
+        "name":"jioMob",
+        "token": {
+            "authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAtYTFlYi03ZmExLTJjNzQzM2M2Y2NhNSJ9.eyJpc3MiOiJzdXBlcmNlbGwiLCJhdWQiOiJzdXBlcmNlbGw6Z2FtZWFwaSIsImp0aSI6IjYyM2EyMDNjLTRjMzMtNDJmOS05ZDA0LTBjMTU4M2RiMWFlZCIsImlhdCI6MTUwNTA0OTc1Niwic3ViIjoiZGV2ZWxvcGVyLzVlYmEwNjhmLTlmZWUtNWJlNi04Y2ZiLWRkOWI1OWM1MzI4NCIsInNjb3BlcyI6WyJjbGFzaCJdLCJsaW1pdHMiOlt7InRpZXIiOiJkZXZlbG9wZXIvc2lsdmVyIiwidHlwZSI6InRocm90dGxpbmcifSx7ImNpZHJzIjpbIjQ3LjE1LjUuOTAiXSwidHlwZSI6ImNsaWVudCJ9XX0.SDOTjNL6JIJ1DPkhzfBN29yq9aOt6JtvBSdb4BxiHsLj7gD4veUqaHwxtCBYnMbia4Fes0CrVwJBfxMCJb_8Ug"
         }
     }
 }

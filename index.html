@@ -8,6 +8,9 @@
     <script src="public/clasherStat.bundle.min.js" type="text/javascript"> </script>
 
     <script>
+        $.getJSON('//freegeoip.net/json/?callback=?', function(data) {
+            console.log(JSON.stringify(data, null, 2));
+        });
         ClasherStat.initCore();
     </script>
 
