@@ -3,9 +3,15 @@
 <head>
     <title>Welcome to Clasher Stat</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="./public/clasherStat.bundle.min.js" type="text/javascript"> </script>
+    <script src="public/clasherStat.bundle.min.js" type="text/javascript"> </script>
+
+    <script>
+        ClasherStat.initCore();
+    </script>
+
+    
 </head>
 <style>
     .burst-8 {
@@ -63,27 +69,33 @@
     .war-planner-container .well .each-player .bottom-line {
         margin: 5px 5px 0 25px;
         position: relative;
-        width: 100%;
+        /* width: 100%; */
         /* for IE 6 */
     }
 
     .war-planner-container .well .each-player .player-xp-badge {
+        position: relative;
         background-image: url(./resource/star-badge.png);
         background-repeat: no-repeat;
         background-size: contain;
-        color: white; 
-    }
-    /* .war-planner-container .well .each-player .player-xp-icon {
-        width: 25px;
+        color: white;
+        width: 22px;
+        height: 22px;
+        margin-right: 0;
+        text-align: center;
+        vertical-align: bottom;
         float: right;
     }
 
-    .war-planner-container .well .each-player .player-xp-value {
+    .war-planner-container .well .each-player .player-xp-badge span {
+        font-size: 10px;
+        font-weight: bold;
         position: absolute;
-        top: 200px;
-        left: 0;
-        width: 100%;
-    } */
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
 </style>
 
 <body>
@@ -99,9 +111,7 @@
                         <div class='bottom-line'>
                             <span class='player-role'>Elder</span>
                             <div class='player-xp-badge'>
-                                <span>12</span>
-                                <!-- <img class='player-xp-icon' src='./resource/star-badge.png' / alt=""> -->
-                                <!-- <h2 class='player-xp-value'>100</h2> -->
+                                <span>777</span>
                             </div>
                         </div>
 
