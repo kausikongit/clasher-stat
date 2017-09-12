@@ -4,148 +4,54 @@
     <title>Welcome to Clasher Stat</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="public/clasherStat.bundle.min.js" type="text/javascript">
     </script>
 
     <script>
-        // ClasherStat.initCore();
+        //ClasherStat.initCore();
     </script>
 
 
 </head>
 <style>
-    .player-box.top {
-        position: relative;
-        margin-bottom: 10px;
-        padding: 10px;
-        min-height: 20px;
-        min-width: 150px;
+    @font-face {
+        font-family: "BlockHead";
+        src: url("you-blockhead.ttf")/* TTF file for CSS3 browsers */
     }
 
-    .player-box:before,
-    .player-box:after {
-        position: absolute;
-        width: 70%;
-        height: 50%;
-        content: "";
-        z-index: -1;
+    .war-planner-container {
+        text-shadow: 0px -0.51px 0px #000000, -1px 2px 1px #000000;
+        font-family: 'BlockHead', sans-serif;
+        font-weight: normal;
+        color: white;
     }
 
-    .player-box.top:before {
-        left: 0;
-        top: 0;
-        -webkit-transform: skewX(-20deg);
-        -ms-transform: skewX(-20deg);
-        transform: skewX(-20deg);
-        background: #d5d6d2;
-        box-shadow: -5px 10px 0px -5px #a7a8a9;
-        z-index: -2;
+    .war-planner-container .clan-players-list,
+    .war-planner-container .opp-players-list {
+        min-width: 160px;
     }
 
-    .player-box.top:after {
-        right: 0;
-        top: 0;
-        -webkit-transform: skewX(20deg);
-        -ms-transform: skewX(20deg);
-        transform: skewX(20deg);
-        background: #d5d6d2;
-        box-shadow: 5px 10px 0px -5px #a7a8a9;
-        z-index: -2;
+    .war-planner-container .attack-player-list {
+        min-width: 100px;
+        margin-left: -10px;
     }
-
-    .player-box:before {
-        left: 0;
-        top: 50%;
-        -webkit-transform: skewX(20deg);
-        -ms-transform: skewX(20deg);
-        transform: skewX(20deg);
-        background: #cecdcd;
-        box-shadow: -4px 5px 0px 0px #787a7b;
-    }
-
-    .player-box:after {
-        right: 0;
-        top: 50%;
-        -webkit-transform: skewX(-20deg);
-        -ms-transform: skewX(-20deg);
-        transform: skewX(-20deg);
-        background: #cecdcd;
-        box-shadow: 4px 5px 0px 0px #787a7b;
-    }
-
-    
-
-
-
-    .player-opp-box.top {
-        margin-bottom: 10px;
-        padding: 10px;
-        min-height: 20px;
-        /* min-width: 150px; */
-    }
-
-    .player-opp-box:before,
-    .player-opp-box:after {
-        position: absolute;
-        width: 70%;
-        height: 56%;
-        content: "";
-        z-index: -1;
-    }
-
-     .player-opp-box.top:after {
-        left: 0;
-        top: 0;
-         -webkit-transform: skewX(20deg);
-        -ms-transform: skewX(20deg);
-        transform: skewX(20deg); 
-        background: #d5d6d2;
-        box-shadow: -5px 10px 0px -5px #a7a8a9;
-        z-index: -2;
-    } 
-
-    .player-opp-box.top:before {
-        right: 0;
-        top: 0;
-        /* -webkit-transform: skewX(20deg);
-        -ms-transform: skewX(20deg);
-        transform: skewX(20deg); */
-        background: #d5d6d2;
-        box-shadow: 5px 10px 0px -5px #a7a8a9;
-        z-index: -2;
-    }
-
-    .player-opp-box:after {
-        left: 0;
-        top: 55%;
-         -webkit-transform: skewX(-20deg);
-        -ms-transform: skewX(-20deg);
-        transform: skewX(-20deg); 
-        background: #cecdcd;
-        /* box-shadow: -4px 5px 0px 0px #787a7b; */
-    }
-
-    .player-opp-box:before {
-        right: 0;
-        top: 56%;
-        /* -webkit-transform: skewX(-20deg);
-        -ms-transform: skewX(-20deg);
-        transform: skewX(-20deg); */
-        background: #cecdcd;
-        /* box-shadow: 4px 5px 0px 0px #787a7b; */
-    }
-
-
 
     .war-planner-container .each-player {
         margin: 5px 0;
         text-align: left;
     }
 
+
     .war-planner-container .each-player .player-name {
-        font-weight: bold;
-        text-shadow: 0px 2px 1px #989696;
+        font-weight: normal;
+        font-size: 10px;
+        width: 76%;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        display: inline-block;
     }
 
     .war-planner-container .each-player .player-league-icon {
@@ -154,8 +60,17 @@
     }
 
     .war-planner-container .each-player .player-role {
-        font-size: 10px;
-        margin-right: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: gray;
+        font-size: 11px;
+        margin: 7px 10px 0 0px;
+        text-shadow: none;
+        font-weight: bold;
+        width: 60%;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        display: inline-block;
     }
 
     .war-planner-container .each-player .bottom-line {
@@ -180,12 +95,166 @@
     }
 
     .war-planner-container .each-player .player-xp-badge span {
-        font-size: 10px;
+        font-size: 8px;
         font-weight: bold;
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+    }
+
+    .war-planner-container .player-opp-box .each-opp-player:nth-child(3) {
+        margin-top: 20px;
+    }
+
+    .player-box.top {
+        position: relative;
+        margin-bottom: 10px;
+        padding: 10px;
+        min-height: 20px;
+        max-height: 70px;
+    }
+
+    .player-box:before,
+    .player-box:after {
+        position: absolute;
+        width: 70%;
+        height: 50%;
+        content: "";
+        z-index: -3;
+    }
+
+    .player-box.top:before {
+        left: 0;
+        top: 0;
+        -webkit-transform: skewX(-20deg);
+        -ms-transform: skewX(-20deg);
+        transform: skewX(-20deg);
+        background: #d5d6d2;
+        box-shadow: -5px 10px 0px -5px #d5d6d2;
+        z-index: -2;
+    }
+
+    .player-box.top:after {
+        right: 0;
+        top: 0;
+        -webkit-transform: skewX(20deg);
+        -ms-transform: skewX(20deg);
+        transform: skewX(20deg);
+        background: #d5d6d2;
+        box-shadow: 5px 10px 0px -5px #d5d6d2;
+        z-index: -2;
+    }
+
+    .player-box:before {
+        left: 0;
+        top: 50%;
+        -webkit-transform: skewX(20deg);
+        -ms-transform: skewX(20deg);
+        transform: skewX(20deg);
+        background: #cecdcd;
+        box-shadow: -4px 5px 0px 0px #787a7b;
+    }
+
+    .player-box:after {
+        right: 0;
+        top: 50%;
+        -webkit-transform: skewX(-20deg);
+        -ms-transform: skewX(-20deg);
+        transform: skewX(-20deg);
+        background: #cecdcd;
+        box-shadow: 4px 5px 0px 0px #787a7b;
+    }
+
+    .player-opp-box.top {
+        padding: 8px;
+        min-height: 20px;
+    }
+
+    .player-opp-box:before,
+    .player-opp-box:after {
+        position: absolute;
+        width: 70%;
+        height: 50%;
+        content: "";
+        z-index: -1;
+    }
+
+    .player-opp-box.top:after {
+        left: 0;
+        top: 0;
+        -webkit-transform: skewX(20deg);
+        -ms-transform: skewX(20deg);
+        transform: skewX(20deg);
+        background: #e3ecc7;
+        z-index: -2;
+    }
+
+    .player-opp-box.top:before {
+        right: 0;
+        top: 0;
+        border-radius: 0 5px 0 0;
+        background: #e3ecc7;
+        z-index: -2;
+    }
+
+    .player-opp-box:after {
+        left: 0;
+        top: 50%;
+        -webkit-transform: skewX(-20deg);
+        -ms-transform: skewX(-20deg);
+        transform: skewX(-20deg);
+        background: #cdd4b6;
+    }
+
+    .player-opp-box:before {
+        right: 0;
+        top: 50%;
+        border-radius: 0 0 5px 0;
+        background: #cdd4b6;
+    }
+
+    .dragg-container {
+        padding: 0 0 0 5px;
+    }
+
+    .dragg-container .outer-marker {
+        padding: 2px;
+        border-radius: 20px;
+        float: left;
+        margin-top: 2px;
+        top: 40px;
+    }
+
+    .dragg-container .inner-marker {
+        width: 30px;
+        height: 30px;
+        border-radius: 15px;
+    }
+
+
+    .dragg-container .first-attack-pointer .inner-marker,
+    .dragg-container .second-attack-pointer .inner-marker {
+        background: #8BC34A;
+    }
+
+    .dragg-container .first-attack-pointer {
+        border: 1px solid #8BC34A;
+    }
+
+    .dragg-container .second-attack-pointer {
+        border: 1px solid #8BC34A;
+        position: absolute;
+    }
+
+    .dragg-container .opp-player-pointer {
+        border: 1px solid #efd15f;
+        margin-top: 20px;
+        float: right;
+    }
+
+    .dragg-container .opp-player-pointer .inner-marker {
+        background: #efd15f;
     }
 </style>
 
@@ -193,55 +262,104 @@
     <p> Welcome to Clasher Stat</p>
     <div id='warPlannerContainer' class="war-planner-container container-fluid text-center">
         <div class="row content">
-            <div class="col-xs-4 sidenav">
-
+            <div class="col-xs-4 clan-players-list">
                 <div class="player-box top">
                     <div class="player-box bottom"></div>
                     <div class='each-player'>
                         <img class='player-league-icon' src='https://api-assets.clashofclans.com/leagues/72/kLWSSyq7vJiRiCantiKCoFuSJOxief6R1ky6AyfB8q0.png'
                             alt="" />
-                        <span class='player-name'>Player Name 1</span>
+                        <span class='player-name'>1. Player Name 1</span>
                         <div class='bottom-line'>
-                            <span class='player-role'>Elder</span>
+                            <span class='player-role'>Co-Leader</span>
                             <div class='player-xp-badge'>
                                 <span>137</span>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <!-- end of player-box -->
-
-            <div class="col-xs-2 opponent">
-                <div class="player-opp-box top">
-                    <div class="player-opp-box bottom"></div>
-                    <div class = "each-opp-player">#2</div>
-                    <div class = "each-opp-player">#5</div>
-                </div>
                 <!-- end of player-box -->
             </div>
 
-            <div class="col-xs-2 arrow-pointer">
-                <h1>Welcome</h1>
-               
-                <hr>
-                <h3>Test</h3>
-                <p>Lorem ipsum...</p>
-            </div>
-            <div class="col-xs-2 droppable">
-               
-            </div>
-            <div class="col-xs-2 sidenav">
-                <div class="well">
-                    <p>ADS</p>
+            <div class="col-xs-2 attack-player-list">
+                <div class="player-opp-box top">
+                    <div class="player-opp-box bottom"></div>
+                    <div class="each-opp-player"><span>#2</span></div>
+                    <div class="each-opp-player"><span>#5</span></div>
                 </div>
-                <div class="well">
-                    <p>ADS</p>
+                <!-- end of opponent player-box -->
+            </div>
+
+            <div class="col-xs-2 dragg-container">
+                <div class="outer-marker first-attack-pointer">
+                    <div class="inner-marker"></div>
                 </div>
+                <div class="outer-marker second-attack-pointer">
+                    <div class="inner-marker"></div>
+                </div>
+                <div class="outer-marker opp-player-pointer">
+                    <div class="inner-marker"></div>
+                </div>
+            </div>
+
+            <div class="col-xs-4 opp-players-list">
+                <div class="player-box top">
+                    <div class="player-box bottom"></div>
+                    <div class='each-player'>
+                        <img class='player-league-icon' src='https://api-assets.clashofclans.com/leagues/72/kLWSSyq7vJiRiCantiKCoFuSJOxief6R1ky6AyfB8q0.png'
+                            alt="" />
+                        <span class='player-name'>1. Opp player</span>
+                        <div class='bottom-line'>
+                            <span class='player-role'>Co-Leader</span>
+                            <div class='player-xp-badge'>
+                                <span>125</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end of player-box -->
+
             </div>
         </div>
         <!-- ------ end of row --- -->
     </div>
+
+    <script>
+        $(".inner-marker").draggable({
+            revert: "invalid",
+            drag: function( event, ui ) {
+                console.log(ui);
+                createLine(ui.helper[0],ui.offset.left,ui.offset.top,ui.offset.left+ui.position.left,ui.offset.top+ui.position.top)
+            }
+        });
+
+        $(".outer-marker").droppable({
+            drop: function (event, ui) {
+                console.log(this);
+
+            }
+        });
+
+        function createLine(elem, x1, y1, x2, y2) {
+            var length = Math.sqrt((x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2));
+            var angle = Math.atan2(y2 - y1, x2 - x1) * 180 / Math.PI;
+            var transform = 'rotate(' + angle + 'deg)';
+
+            var line = $('<div>')
+                .appendTo(elem)
+                .addClass('line')
+                .css({
+                    'position': 'absolute',
+                    'transform': transform
+                })
+                .width(length)
+                .offset({
+                    left: x1,
+                    top: y1
+                });
+
+            return line;
+        }
+    </script>
 
 
 </body>
