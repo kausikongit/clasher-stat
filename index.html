@@ -22,15 +22,22 @@
     }
 
     .war-planner-container {
-        text-shadow: 0px -0.51px 0px #000000, -1px 2px 1px #000000;
+        text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.4), 1px -1px 0 rgba(0, 0, 0, 0.4), -1px 1px 0 rgba(0, 0, 0, 0.4), 1px 1px 0 rgba(0, 0, 0, 0.4), 0px 2px 1px rgba(0, 0, 0, 0.7);
         font-family: 'BlockHead', sans-serif;
         font-weight: normal;
         color: white;
     }
 
-    .war-planner-container .clan-players-list,
-    .war-planner-container .opp-players-list {
+    .war-planner-container>.content {
+        min-width: 540px;
+    }
+
+    .war-planner-container .clan-players-list {
         min-width: 160px;
+    }
+
+    .war-planner-container .opp-players-list {
+        min-width: 60px;
     }
 
     .war-planner-container .attack-player-list {
@@ -63,7 +70,7 @@
         font-family: Arial, Helvetica, sans-serif;
         color: gray;
         font-size: 11px;
-        margin: 7px 10px 0 0px;
+        margin: 7px 0 0 0;
         text-shadow: none;
         font-weight: bold;
         width: 60%;
@@ -74,8 +81,9 @@
     }
 
     .war-planner-container .each-player .bottom-line {
-        margin: 5px 5px 0 25px;
+        margin: 5px 0 0 0;
         position: relative;
+        text-align: center
     }
 
     .war-planner-container .each-player .player-xp-badge {
@@ -90,6 +98,7 @@
         text-align: center;
         vertical-align: bottom;
         float: right;
+        letter-spacing: 1px;
         -webkit-filter: drop-shadow(1px 2px 1px #999);
         filter: drop-shadow(1px 2px 1px #999);
     }
@@ -130,8 +139,8 @@
         -webkit-transform: skewX(-20deg);
         -ms-transform: skewX(-20deg);
         transform: skewX(-20deg);
-        background: #d5d6d2;
-        box-shadow: -5px 10px 0px -5px #d5d6d2;
+        background: #e0f1ae;
+        box-shadow: -5px 10px 0px -5px #e0f1ae;
         z-index: -2;
     }
 
@@ -141,8 +150,8 @@
         -webkit-transform: skewX(20deg);
         -ms-transform: skewX(20deg);
         transform: skewX(20deg);
-        background: #d5d6d2;
-        box-shadow: 5px 10px 0px -5px #d5d6d2;
+        background: #e0f1ae;
+        box-shadow: 5px 10px 0px -5px #e0f1ae;
         z-index: -2;
     }
 
@@ -152,8 +161,8 @@
         -webkit-transform: skewX(20deg);
         -ms-transform: skewX(20deg);
         transform: skewX(20deg);
-        background: #cecdcd;
-        box-shadow: -4px 5px 0px 0px #787a7b;
+        background: #c8d89b;
+        box-shadow: -4px 5px 0px 0px #c8d89b;
     }
 
     .player-box:after {
@@ -162,12 +171,12 @@
         -webkit-transform: skewX(-20deg);
         -ms-transform: skewX(-20deg);
         transform: skewX(-20deg);
-        background: #cecdcd;
-        box-shadow: 4px 5px 0px 0px #787a7b;
+        background: #c8d89b;
+        box-shadow: 2px 5px 0px 0px #c8d89b;
     }
 
     .player-opp-box.top {
-        padding: 8px;
+        padding: 9px 0;
         min-height: 20px;
     }
 
@@ -214,6 +223,80 @@
         background: #cdd4b6;
     }
 
+    .player-box:before,
+    .player-box:after {
+        width: 80%;
+    }
+
+    .opp-players-list .player-box.top:before {
+        background: #ffe9e7;
+        box-shadow: -5px 10px 0px -5px #ffe9e7;
+    }
+
+    .opp-players-list .player-box.top:after {
+        background: #ffe9e7;
+        box-shadow: 5px 10px 0px -5px #ffe9e7;
+    }
+
+    .opp-players-list .player-box:before {
+        background: #e8d2d0;
+        box-shadow: -4px 5px 0px 0px #e8d2d0;
+    }
+
+    .opp-players-list .player-box:after {
+        background: #e8d2d0;
+        box-shadow: 4px 5px 0px 0px #e8d2d0;
+    }
+
+
+
+    /* .opp-players-list .player-box.top:before,
+    .opp-players-list .player-box.top:after {
+        background: #ffe9e7;
+        box-shadow: 4px 5px 0px 0px #ffe9e7;
+    }
+
+    .opp-players-list .player-box:before,
+    .opp-players-list .player-box:after {
+        background: #e8d2d0;
+        box-shadow: 4px 5px 0px 0px #e8d2d0;
+    } */
+
+    .war-planner-container .each-opp-player {
+        position: relative;
+        overflow: hidden;
+        font-size: 10px;
+    }
+
+    .war-planner-container .each-opp-player span {
+        padding-top: 4px;
+    }
+
+    .war-planner-container .each-opp-player .player-pos {
+        border-right: 1px solid #999;
+        float: left;
+        padding-right: 10px;
+    }
+
+    .war-planner-container .each-opp-player .player-star-count {
+        float: left;
+        margin-left: 13px;
+        margin-right: 3px;
+        -webkit-filter: drop-shadow(1px 4px 1px #999);
+        filter: drop-shadow(1px 4px 1px #999);
+    }
+
+
+    .war-planner-container .each-opp-player .star-img {
+        width: 20px;
+        float: right;
+        vertical-align: middle;
+    }
+
+    .war-planner-container .opp-players-list .each-player {
+        text-align: center;
+    }
+
     .dragg-container {
         padding: 0 0 0 5px;
     }
@@ -256,6 +339,14 @@
     .dragg-container .opp-player-pointer .inner-marker {
         background: #efd15f;
     }
+
+    div.line {
+        transform-origin: 0 100%;
+        height: 3px;
+        /* Line width of 3 */
+        background: #000;
+        /* Black fill */
+    }
 </style>
 
 <body>
@@ -283,13 +374,21 @@
             <div class="col-xs-2 attack-player-list">
                 <div class="player-opp-box top">
                     <div class="player-opp-box bottom"></div>
-                    <div class="each-opp-player"><span>#2</span></div>
-                    <div class="each-opp-player"><span>#5</span></div>
+                    <div class="each-opp-player">
+                        <span class="player-pos">#2</span>
+                        <span class='player-star-count'> 3 </span>
+                        <img class='star-img' src='resource/war-star.png' />
+                    </div>
+                    <div class="each-opp-player">
+                        <span class="player-pos">#5</span>
+                        <span class='player-star-count'> 2 </span>
+                        <img class='star-img' src='resource/war-star.png' />
+                    </div>
                 </div>
                 <!-- end of opponent player-box -->
             </div>
 
-            <div class="col-xs-2 dragg-container">
+            <div class="col-xs-4 dragg-container">
                 <div class="outer-marker first-attack-pointer">
                     <div class="inner-marker"></div>
                 </div>
@@ -301,18 +400,18 @@
                 </div>
             </div>
 
-            <div class="col-xs-4 opp-players-list">
+            <div class="col-xs-2 opp-players-list">
                 <div class="player-box top">
                     <div class="player-box bottom"></div>
                     <div class='each-player'>
-                        <img class='player-league-icon' src='https://api-assets.clashofclans.com/leagues/72/kLWSSyq7vJiRiCantiKCoFuSJOxief6R1ky6AyfB8q0.png'
-                            alt="" />
-                        <span class='player-name'>1. Opp player</span>
+                        <!-- <img class='player-league-icon' src='https://api-assets.clashofclans.com/leagues/72/kLWSSyq7vJiRiCantiKCoFuSJOxief6R1ky6AyfB8q0.png'
+                            alt="" /> -->
+                        <div class='player-xp-badge'>
+                            <span>125</span>
+                        </div>
+                        <span class='player-pos'>#1</span>
                         <div class='bottom-line'>
                             <span class='player-role'>Co-Leader</span>
-                            <div class='player-xp-badge'>
-                                <span>125</span>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -326,9 +425,12 @@
     <script>
         $(".inner-marker").draggable({
             revert: "invalid",
-            drag: function( event, ui ) {
-                console.log(ui);
-                createLine(ui.helper[0],ui.offset.left,ui.offset.top,ui.offset.left+ui.position.left,ui.offset.top+ui.position.top)
+            drag: function (event, ui) {
+                //console.log(event);
+                console.log(ui.offset.left, ui.offset.top);
+                createLine($(event.originalEvent.target).parent(), ui.offset.left, ui.offset.top, ui.offset
+                    .left + ui.position.left,
+                    ui.offset.top + ui.position.top)
             }
         });
 
