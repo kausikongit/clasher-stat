@@ -50,7 +50,6 @@
         text-align: left;
     }
 
-
     .war-planner-container .each-player .player-name {
         font-weight: normal;
         font-size: 10px;
@@ -121,7 +120,7 @@
         margin-bottom: 10px;
         padding: 10px;
         min-height: 20px;
-        max-height: 70px;
+        max-height: 75px;
     }
 
     .player-box:before,
@@ -140,7 +139,6 @@
         -ms-transform: skewX(-20deg);
         transform: skewX(-20deg);
         background: #e0f1ae;
-        box-shadow: -5px 10px 0px -5px #e0f1ae;
         z-index: -2;
     }
 
@@ -151,7 +149,6 @@
         -ms-transform: skewX(20deg);
         transform: skewX(20deg);
         background: #e0f1ae;
-        box-shadow: 5px 10px 0px -5px #e0f1ae;
         z-index: -2;
     }
 
@@ -162,7 +159,6 @@
         -ms-transform: skewX(20deg);
         transform: skewX(20deg);
         background: #c8d89b;
-        box-shadow: -4px 5px 0px 0px #c8d89b;
     }
 
     .player-box:after {
@@ -172,11 +168,10 @@
         -ms-transform: skewX(-20deg);
         transform: skewX(-20deg);
         background: #c8d89b;
-        box-shadow: 2px 5px 0px 0px #c8d89b;
     }
 
     .player-opp-box.top {
-        padding: 9px 0;
+        padding: 8px 0;
         min-height: 20px;
     }
 
@@ -248,19 +243,6 @@
         box-shadow: 4px 5px 0px 0px #e8d2d0;
     }
 
-
-
-    /* .opp-players-list .player-box.top:before,
-    .opp-players-list .player-box.top:after {
-        background: #ffe9e7;
-        box-shadow: 4px 5px 0px 0px #ffe9e7;
-    }
-
-    .opp-players-list .player-box:before,
-    .opp-players-list .player-box:after {
-        background: #e8d2d0;
-        box-shadow: 4px 5px 0px 0px #e8d2d0;
-    } */
 
     .war-planner-container .each-opp-player {
         position: relative;
@@ -343,9 +325,7 @@
     div.line {
         transform-origin: 0 100%;
         height: 3px;
-        /* Line width of 3 */
         background: #000;
-        /* Black fill */
     }
 </style>
 
@@ -404,8 +384,6 @@
                 <div class="player-box top">
                     <div class="player-box bottom"></div>
                     <div class='each-player'>
-                        <!-- <img class='player-league-icon' src='https://api-assets.clashofclans.com/leagues/72/kLWSSyq7vJiRiCantiKCoFuSJOxief6R1ky6AyfB8q0.png'
-                            alt="" /> -->
                         <div class='player-xp-badge'>
                             <span>125</span>
                         </div>
