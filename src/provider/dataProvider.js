@@ -1,9 +1,9 @@
-/*
+/**
  * dataProvider.js
- * @CreatedOn: 03-Sep-2017
- * @Author: Kausik Dey
- * @Version: 1.0.0
- * @Description:It will provide data by fetching from COC API
+ * @createdOn: 03-Sep-2017
+ * @author: Kausik Dey
+ * @version: 1.0.0
+ * @description:It will provide data by fetching from COC API
  */
 
  /*
@@ -13,73 +13,60 @@
  */
 
 "use strict";
+
 const conf = require("./../configuration");
+let Promise = require("bluebird");
 
 class DataProvider {
     constructor() {}
 
     searchClan(filter, onSuccess, onError) {
-        this.doRequest(
-            "/clans.php", {
-                "opt": "name="+filter+"&limit=10"
-            }, "GET",
-            onSuccess,
-            onError
-        );
+      return new Promise((resolve, reject) => {
+        this.doRequest("/clans.php", {"opt": "name="+filter+"&limit=10"}, "GET")
+          .then(resolve, reject);
+      });
     }
 
-    getClanData(clanTag, onSuccess, onError) {
-        this.doRequest(
-            "/clans.php", {
-                "tag": clanTag
-            }, "GET",
-            onSuccess, 
-            onError
-        );
+    getClanData(clanTag) {
+      return new Promise((resolve, reject) => {
+        this.doRequest("/clans.php", {"tag": clanTag}, "GET")
+          .then(resolve, reject);
+      });
     }
 
     getClanMembers(clanTag, onSuccess, onError) {
-        this.doRequest(
-            "/clans.php", {
-                "tag": clanTag,
-                "subtype":"members"
-            }, "GET",
-            onSuccess, 
-            onError
-        );
+      return new Promise((resolve, reject) => {
+        this.doRequest("/clans.php", {"tag": clanTag, "subtype": "members"}, "GET")
+          .then(resolve, reject);
+      });
     }
 
     getClanWarlog(clanTag, onSuccess, onError) {
-        this.doRequest(
-            "/clans.php", {
-                "tag": clanTag,
-                "subtype":"warlog"
-            }, "GET",
-            onSuccess, 
-            onError
-        );
+      return new Promise((resolve, reject) => {
+        this.doRequest("/clans.php", {"tag": clanTag, "subtype": "warlog"}, "GET")
+          .then(resolve, reject);
+      });
     }
 
     getClanCurrentWar(clanTag, onSuccess, onError) {
-        this.doRequest(
-            "/clans.php", {
-                "tag": clanTag,
-                "subtype":"currentwar"
-            }, "GET",
-            onSuccess, 
-            onError
-        );
+      return new Promise((resolve, reject) => {
+        this.doRequest("/clans.php", {"tag": clanTag, "subtype": "currentwar"}, "GET")
+          .then(resolve, reject);
+      });
     }
 
     doRequest(reqURL, reqData, reqType, onSuccess, onError) {
+      return new Promise((resolve,reject) => {
         $.ajax({
             url: conf.baseURL + reqURL,
             data: reqData,
             type: reqType,
             dataType: "json",
-            success: onSuccess,
-            error: onError
+            success: resolve,
+            error: reject
         });
+      });
+        
     }
 
 }

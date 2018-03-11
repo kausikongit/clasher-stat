@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/kausikongit/clasher-stat/blob/master/README.md",
   "devDependencies": {
+    "bluebird": "^3.5.1",
     "browserify": "^14.3.0",
     "gulp": "3.9.x",
     "gulp-browserify": "^0.5.1",

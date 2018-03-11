@@ -1,4 +1,4 @@
 module.exports = {
     "env" : "localhostWork",
-    "baseURL": "/clasher-stat/api/v1"
+    "baseURL": "/clasherStat/api/v1"
 }; 
